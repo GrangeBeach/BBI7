@@ -33,8 +33,11 @@ h1{font-size:clamp(58px,9vw,118px);line-height:.88;margin:0 0 28px;letter-spacin
 .statement{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}.quote{font-size:clamp(24px,3vw,42px);line-height:1.05;letter-spacing:-.04em;margin:0}.bodycopy{color:#c5c8cf;font-size:18px;max-width:720px}.bodycopy p{margin-top:0;margin-bottom:22px}
 .rights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:45px}.card{padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.card strong{display:block;margin-bottom:7px}.card p{margin:0;color:var(--muted);font-size:14px}
 .contact{background:linear-gradient(135deg,#151b24,#0c1016);border:1px solid var(--line);border-radius:26px;padding:50px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{margin:0 0 10px}.contact p{margin:0;color:var(--muted)}
+.platforms{padding:110px 0 120px;border-top:1px solid rgba(255,255,255,.07);background:radial-gradient(circle at 15% 20%,rgba(216,179,106,.08),transparent 25%),radial-gradient(circle at 85% 70%,rgba(143,203,209,.07),transparent 30%)}
+.platformsIntro{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:42px}.platformsIntro h2{font-size:clamp(36px,5vw,62px);line-height:1;letter-spacing:-.04em;margin:9px 0 0}.platformsIntro p{max-width:470px;color:var(--muted);margin:0;font-size:16px}
+.platformGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.platform{position:relative;min-height:82px;padding:18px 20px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));transition:.25s;overflow:hidden}.platform:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),var(--cyan));opacity:.55}.platform:hover{transform:translateY(-3px);border-color:rgba(216,179,106,.35);background:linear-gradient(145deg,rgba(216,179,106,.08),rgba(143,203,209,.035))}.platform strong{display:block;font-size:16px;margin-bottom:3px}.platform span{color:var(--muted);font-size:11px;letter-spacing:.03em}.platform.featured{border-color:rgba(216,179,106,.3);background:linear-gradient(145deg,rgba(216,179,106,.10),rgba(143,203,209,.04))}.platform.featured strong{color:var(--gold2)}.platformNote{display:flex;justify-content:center;gap:12px;margin-top:36px;color:#777d88;font-size:11px;letter-spacing:.16em;text-transform:uppercase}.platformNote span:first-child{color:var(--gold);font-weight:800}
 footer{padding:38px 0;color:#777d88;font-size:12px;border-top:1px solid rgba(255,255,255,.07)}.foot{display:flex;justify-content:space-between;gap:20px}.gold{color:var(--gold)}
-@media(max-width:800px){.navin{height:64px}.brand{width:100px;background-size:100px auto}.links{display:flex;gap:8px;font-size:9px;letter-spacing:.08em;white-space:nowrap}.heroGrid,.statement{grid-template-columns:1fr;gap:45px}.hero{padding-top:194px}.eyebrow .mobileBreak{display:block}.eyebrow .desktopSeparator{display:none}.orbit{max-width:330px}.albums,.tracks,.rights{grid-template-columns:1fr}.sectionHead,.contact,.foot{display:block}.sectionHead p{margin-top:18px}.contact{padding:30px}.contact .btn{display:inline-block;margin-top:25px;position:relative}.wrap{width:min(var(--max),calc(100% - 28px))}}
+@media(max-width:800px){.navin{height:64px}.brand{width:100px;background-size:100px auto}.links{display:flex;gap:8px;font-size:9px;letter-spacing:.08em;white-space:nowrap}.heroGrid,.statement{grid-template-columns:1fr;gap:45px}.hero{padding-top:194px}.eyebrow .mobileBreak{display:block}.eyebrow .desktopSeparator{display:none}.orbit{max-width:330px}.albums,.tracks,.rights{grid-template-columns:1fr}.sectionHead,.contact,.foot{display:block}.sectionHead p{margin-top:18px}.contact{padding:30px}.contact .btn{display:inline-block;margin-top:25px;position:relative}.wrap{width:min(var(--max),calc(100% - 28px))}.platforms{padding:80px 0 90px}.platformsIntro{display:block}.platformsIntro p{margin-top:20px}.platformGrid{grid-template-columns:1fr}.platform{min-height:70px}.platformNote{flex-wrap:wrap;text-align:center}}
 </style>
 </head>
 <body>
@@ -47,6 +50,51 @@ footer{padding:38px 0;color:#777d88;font-size:12px;border-top:1px solid rgba(255
 <article class="album"><div class="cover one"><div class="coverText"><small>BBI7</small><b>ORCHESTRAL<br>FUSION</b></div></div><div class="albumBody"><div class="year">2022 · Album · 9 songs · 33 min 38 sec</div><h3>Orchestral Fusion</h3><div class="audioPlayer"><div class="nowPlaying" id="nowPlaying1">Select a track to begin listening.</div><audio id="audioPlayer1" controls preload="metadata"></audio></div><div class="tracks" id="tracks1"></div></div></article>
 <article class="album"><div class="cover two"><div class="coverText"><small>BBI7</small><b>ORCHESTRAL<br>FUSION 2</b></div></div><div class="albumBody"><div class="year">2024 · Album · 11 songs · 35 min 13 sec</div><h3>Orchestral Fusion 2</h3><div class="audioPlayer"><div class="nowPlaying" id="nowPlaying2">Select a track to begin listening.</div><audio id="audioPlayer2" controls preload="metadata"></audio></div><div class="tracks" id="tracks2"></div></div></article>
 </div></div></section>
+<section class="platforms"><div class="wrap"><div class="platformsIntro"><div><div class="kicker">Listen anywhere</div><h2>Your music. Your favourite apps.</h2></div><p>Find BBI7 across a worldwide network of music, radio, social and entertainment services — wherever you choose to listen.</p></div><div class="platformGrid">
+<div class="platform"><strong>Airtel</strong><span>Telecom / music service</span></div>
+<div class="platform"><strong>AliMusic</strong><span>Music / entertainment</span></div>
+<div class="platform"><strong>Amazon Music</strong><span>Music streaming / downloads</span></div>
+<div class="platform"><strong>Anghami</strong><span>Music streaming</span></div>
+<div class="platform"><strong>Apple Music &amp; iTunes</strong><span>Music streaming / downloads</span></div>
+<div class="platform"><strong>Audiomack</strong><span>Music streaming / discovery</span></div>
+<div class="platform"><strong>Boomplay</strong><span>Music streaming · Africa only</span></div>
+<div class="platform"><strong>Celcom</strong><span>Telecom / music service</span></div>
+<div class="platform"><strong>Claro Música</strong><span>Music streaming</span></div>
+<div class="platform"><strong>Deezer</strong><span>Music streaming</span></div>
+<div class="platform"><strong>Digi</strong><span>Telecom / music service</span></div>
+<div class="platform"><strong>Facebook / Meta</strong><span>Social / music library</span></div>
+<div class="platform"><strong>FLO</strong><span>Music streaming</span></div>
+<div class="platform"><strong>iHeartRadio</strong><span>Radio / streaming</span></div>
+<div class="platform"><strong>iMUSIC</strong><span>Music streaming</span></div>
+<div class="platform"><strong>Instagram</strong><span>Social / music library</span></div>
+<div class="platform"><strong>JioSaavn</strong><span>Music streaming</span></div>
+<div class="platform"><strong>Kanjian</strong><span>Music platform</span></div>
+<div class="platform"><strong>KKBox</strong><span>Music streaming</span></div>
+<div class="platform"><strong>KuGou</strong><span>Music streaming / downloads</span></div>
+<div class="platform"><strong>MassiveMusic</strong><span>Music / brand services</span></div>
+<div class="platform"><strong>MTN</strong><span>Telecom / music service</span></div>
+<div class="platform"><strong>Music Worx</strong><span>DJ streaming / downloads</span></div>
+<div class="platform"><strong>Muska</strong><span>Music streaming · Africa</span></div>
+<div class="platform"><strong>NetEase Cloud Music</strong><span>Music streaming</span></div>
+<div class="platform"><strong>NovelFM</strong><span>Audio / music service</span></div>
+<div class="platform"><strong>Nuuday</strong><span>Music / telecom distribution</span></div>
+<div class="platform"><strong>Pandora</strong><span>Music / radio · US only</span></div>
+<div class="platform"><strong>Peloton</strong><span>Fitness / music programming</span></div>
+<div class="platform"><strong>Qobuz</strong><span>Music streaming / downloads</span></div>
+<div class="platform"><strong>Rythm</strong><span>Music platform</span></div>
+<div class="platform"><strong>Safaricom</strong><span>Telecom / music service</span></div>
+<div class="platform"><strong>Shazam</strong><span>Music discovery</span></div>
+<div class="platform"><strong>Snapchat</strong><span>Social / music library</span></div>
+<div class="platform"><strong>SoundCloud</strong><span>Music streaming / discovery</span></div>
+<div class="platform"><strong>Soundtrack Your Brand</strong><span>Business background music</span></div>
+<div class="platform featured"><strong>Spotify</strong><span>Music streaming</span></div>
+<div class="platform"><strong>Tencent Music / QQ Music</strong><span>Music streaming</span></div>
+<div class="platform"><strong>TIDAL</strong><span>Music streaming</span></div>
+<div class="platform"><strong>TikTok</strong><span>Social / short-form video</span></div>
+<div class="platform"><strong>U-Mobile</strong><span>Telecom / music service</span></div>
+<div class="platform"><strong>YouTube Content ID</strong><span>YouTube rights / monetisation</span></div>
+<div class="platform featured"><strong>YouTube Music</strong><span>Music streaming</span></div>
+</div><div class="platformNote"><span>43 platforms</span><span>•</span><span>Worldwide distribution</span><span>•</span><span>Listen your way</span></div></div></section>
 </main>
 <footer><div class="wrap foot"><div>© <span id="year"></span> BBI7. All rights reserved.</div><div><span class="gold">BBI7.com</span> · Original Orchestral Fusion</div></div></footer>
 </div>
